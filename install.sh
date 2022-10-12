@@ -16,5 +16,5 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
   echo "Creating symlink to $file in home directory."
-  ln -s ./file ~/.$file
+  ln -s ./$file ~/.$file
 done
