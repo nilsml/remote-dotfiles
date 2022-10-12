@@ -6,7 +6,6 @@
 
 ########## Variables
 
-dir=$(pwd)                        # dotfiles directory
 files="bash_aliases bash_profile bashrc zshrc shell_prompt.sh vimrc gitconfig profile tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
@@ -17,5 +16,5 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
   echo "Creating symlink to $file in home directory."
-  ln -s $dir/$file ~/.$file
+  ln -s ./file ~/.$file
 done
