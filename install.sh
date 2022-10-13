@@ -8,7 +8,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bash_aliases bash_profile bashrc zshrc shell_prompt.sh vimrc gitconfig profile tmux.conf config"    # list of files/folders to symlink in homedir
+files="bash_aliases bash_profile bashrc zshrc shell_prompt.sh vimrc gitconfig profile tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -39,4 +39,10 @@ for file in $files; do
   mv ~/.$file $olddir/
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
+done
+
+# copy config files
+for item in $dir/config; do
+  echo "copying config items to .config dir."
+  cp -r $dir/config/$item ~/.config/
 done
