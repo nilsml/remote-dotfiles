@@ -45,5 +45,5 @@ items=($( ls $dir/config/* ))
 # copy config files
 for item in $items; do
   echo "copying $item to .config dir."
-  cp -r $dir/config/$item ~/.config/
+  cp -r $item ~/.config/
 done
