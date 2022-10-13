@@ -41,8 +41,9 @@ for file in $files; do
   ln -s $dir/$file ~/.$file
 done
 
+items=($( ls $dir/config/* ))
 # copy config files
-for item in $dir/config; do
-  echo "copying config items to .config dir."
+for item in $items; do
+  echo "copying $item to .config dir."
   cp -r $dir/config/$item ~/.config/
 done
