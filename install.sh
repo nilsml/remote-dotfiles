@@ -44,7 +44,7 @@ done
 items=($( ls $dir/config ))
 # copy config files
 echo "Number of folders in config: ${#items[@]}"
-for (i=0; i<${#items[@]}; i++); do
+for ((i=0; i<${#items[@]}; i++)); do
   echo "copying ${item[$i]} to .config dir."
   cp -r $dir/config/${items[$i]} ~/.config/
 done
