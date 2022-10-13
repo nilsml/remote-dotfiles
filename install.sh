@@ -12,6 +12,9 @@ files="bash_aliases bash_profile bashrc zshrc shell_prompt.sh vimrc gitconfig pr
 
 ##########
 
+# instal oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -- -y
+
 # install or update starship
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
 
